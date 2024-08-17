@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    background-color: #5b28b9;
+    color: #fff;
+    padding: 16px 0;
+}
+
+nav {
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sobre-loja {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: #f4f4f4;
+}
+
+.coluna-imagem,
+.coluna-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.coluna-imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+.produtos {
+    padding: 20px 0;
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto p {
+    margin-bottom: 20px;
+}
+
+.produto {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.produto h3 {
+    margin: 10px 0;
+}
+
+.produto button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+}
+
+.produto button:hover {
+    background-color: #218838;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #5b28b9;
+    color: #fff;
+}
+
+@media (max-width: 1023px) {
+    .produtos-lista {
+        flex-direction: column;
+    }
+
+    .produto {
+        flex: 1 1 100%;
+    }
+
+    .coluna-imagem,
+    .coluna-texto {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    header, footer {
+        font-size: 16px;
+    }
+
+    .produto h3 {
+        font-size: 18px;
+    }
+
+    .produto button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
